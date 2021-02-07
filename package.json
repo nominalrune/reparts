@@ -4,16 +4,12 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.3",
+    "@toast-ui/editor": "^2.5.1",
     "react": "^17.0.1",
     "react-app-polyfill": "^2.0.0",
-    "react-dev-utils": "^11.0.2",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.2",
-    "typescript": "^4.0.3",
     "web-vitals": "^0.2.4",
-    "webpack": "4.44.2",
-    "webpack-dev-server": "3.11.0",
-    "webpack-manifest-plugin": "2.2.0",
     "workbox-background-sync": "^5.1.3",
     "workbox-broadcast-update": "^5.1.3",
     "workbox-cacheable-response": "^5.1.3",
@@ -27,6 +23,27 @@
     "workbox-strategies": "^5.1.3",
     "workbox-streams": "^5.1.3",
     "workbox-webpack-plugin": "5.1.4"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^6.1.17",
+    "@storybook/addon-essentials": "^6.1.17",
+    "@storybook/addon-links": "^6.1.17",
+    "@storybook/node-logger": "^6.1.17",
+    "@storybook/preset-create-react-app": "^3.1.5",
+    "@storybook/react": "^6.1.17",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.53",
+    "@types/react-dom": "^16.9.8",
+    "react-dev-utils": "^11.0.2",
+    "storybook": "^6.1.17",
+    "typescript": "^4.0.3",
+    "webpack": "4.44.2",
+    "webpack-dev-server": "3.11.0",
+    "webpack-manifest-plugin": "2.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -55,54 +72,10 @@
     ]
   },
   "jest": {
-    "roots": [
-      "<rootDir>/src"
-    ],
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
-      "!src/**/*.d.ts"
-    ],
-    "setupFiles": [
-      "react-app-polyfill/jsdom"
-    ],
-    "setupFilesAfterEnv": [
-      "<rootDir>/src/setupTests.ts"
-    ],
-    "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
-      "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
-    ],
-    "testEnvironment": "jsdom",
-    "testRunner": "C:\\projects\\reparts\\node_modules\\jest-circus\\runner.js",
-    "transform": {
-      "^.+\\.(js|jsx|mjs|cjs|ts|tsx)$": "<rootDir>/config/jest/babelTransform.js",
-      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
-      "^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
-    },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs|ts|tsx)$",
-      "^.+\\.module\\.(css|sass|scss)$"
-    ],
-    "modulePaths": [],
-    "moduleNameMapper": {
-      "^react-native$": "react-native-web",
-      "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
-    },
-    "moduleFileExtensions": [
-      "web.js",
-      "js",
-      "web.ts",
-      "ts",
-      "web.tsx",
-      "tsx",
-      "json",
-      "web.jsx",
-      "jsx",
-      "node"
-    ],
-    "watchPlugins": [
-      "jest-watch-typeahead/filename",
-      "jest-watch-typeahead/testname"
+      "!src/**/*.d.ts",
+      "!src/**/*.stories.tsx"
     ],
     "resetMocks": true
   },
